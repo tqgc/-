@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main()
+{
+	int i =0;//鸡的数量
+	int j = 0;//兔的数量
+	int n = 0;
+	int m = 0;
+	printf("输入一共有多少只鸡和兔：\n");
+	scanf("%d", &n);
+	printf("输入一共有多少只脚：\n");
+	scanf("%d", &m);
+	for (i = 0; i <= n; i++)
+	{
+		for (j = 0; j <= n; j++)
+		{
+			if ((i * 2 + j * 4) == m && (i + j == n))
+			{
+				printf("鸡有%d只，兔有%d只\n", i, j);
+				break;
+			}
+		}
+	}
+	return;
+}
